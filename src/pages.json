@@ -1,0 +1,94 @@
+{
+	//组件自动引入规则
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			// uni-ui 规则如下配置
+			"^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue"
+		}
+	},
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTextStyle": "white",
+				"navigationBarTitleText": "首页"
+			}
+		},
+		{
+			"path": "pages/more/more",
+			"style": {
+				"navigationBarTitleText": "更多"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": ""
+				//"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/reg/reg",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path": "pages/code-login/code-login",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	// 设置 TabBar
+	"tabBar": {
+		"color": "#333",
+		"selectedColor": "#27ba9b",
+		"backgroundColor": "#fff",
+		"borderStyle": "white",
+		"list": [
+			{
+				"text": "首页",
+				"pagePath": "pages/index/index",
+				"iconPath": "static/tabs/home_default.png",
+				"selectedIconPath": "static/tabs/home_selected.png"
+			},
+			{
+				"text": "更多",
+				"pagePath": "pages/more/more",
+				"iconPath": "static/tabs/category_default.png",
+				"selectedIconPath": "static/tabs/category_selected.png"
+			}
+		]
+	},
+	// 分包加载规则
+	"subPackages": [
+		{
+			// 子包的根目录
+			"root": "subLogin",
+			// 页面路径和窗口表现
+			"pages": [
+				{
+					"path": "code/code",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				},
+				{
+					"path": "resetPwd/resetPwd",
+					"style": {
+						"navigationBarTitleText": ""
+					}
+				}
+			]
+		}
+	]
+}
