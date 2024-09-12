@@ -14,7 +14,7 @@
       <view v-if="!isForgetPwd" class="login-form-text">
         <text class="user-login" @tap="userLogin">账号登录</text>
         <text class="h-line"></text>
-        <text class="reg">注册</text>
+        <text class="reg" @tap="goToReg">注册</text>
       </view>
     </view>
   </view>
@@ -37,6 +37,13 @@ const getCodePwd = () => {
 const getCode = () => {
   uni.navigateTo({
     url: '/subLogin/code/code',
+  })
+}
+
+// 跳转到注册页面(uni.navigateTo跳转到指定页面)
+const goToReg = () => {
+  uni.navigateTo({
+    url: '/pages/reg/reg',
   })
 }
 
